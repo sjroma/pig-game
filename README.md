@@ -1,5 +1,3 @@
-# Pig game
-
 ---
 course: >-
   Ruby on Rails
@@ -8,6 +6,8 @@ title: >-
 description: >-
   Use object-oriented programming and inheritance to make a better player for the game of Pig.
 ---
+
+# Pig game
 
 [The game of Pig](https://en.wikipedia.org/wiki/Pig_(dice_game)) is commonly implemented in exercises to learn programming and better understand probability. In this project, you will implement different players for the game in order to better understand inheritance.
 
