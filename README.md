@@ -1,3 +1,5 @@
+# Pig game
+
 ---
 course: >-
   Ruby on Rails
@@ -11,10 +13,10 @@ description: >-
 
 This project contains starter files in the `starter_files/` directory. In `lib/`, you will find `pig.rb`, containing a `Pig` class to run the game, and `player.rb`, which implements a `Player` class and one subclass, `CautiousPlayer`. In `player.rb`, you will implement multiple subclasses of `Player`, each using a different strategy to play the game. There is not a specified set of strategies you must implement, but you must implement at least three. Some ideas are:
 
-* a player that stops 50% of the time
-* a player that stops when they get a particular score for a turn
-* a player that stops after a certain number of rolls
-* a player that changes strategies based on their current total score
+[ ] a player that stops 50% of the time
+[x] a player that stops when they get a particular score for a turn
+[x] a player that stops after a certain number of rolls
+[x] a player that changes strategies based on their current total score
 
 You will have to read the code for the `Player` class to see what you will need to override and extend. You may be tempted to make a player that cheats, but there is a test suite that will test all subclasses of `Player` to make sure they record scores correctly.
 
@@ -30,4 +32,5 @@ The game runner and test suite for this project use some advanced features of Ru
 
 [callout-download]
 [/callout-download]
-# pig-game
+
+#### /tiy/week09/dailyDay4/pig
