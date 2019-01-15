@@ -50,38 +50,37 @@ class CautiousPlayer < Player
 end
 
 ## TODO add your own Player subclasses here
-## StopScore20Players stops rolling when turn score is greater than 20
-class Hold20Play1 < Player
-	def roll_again?
-		super && ((@turn_score < 20) || (@score >= 100)) 
-	end
-end
-
-class Hold20Play2 < Player
+## A player that stops when they get a particular score for a turn
+class StopTwenty < Player
 	def roll_again?
 		super && @turn_score < 20
 	end
 end
 
-## if player's total score is 78 don't stop at 98...go one more for the win!
-class StrategicPlay1 < Player
+## A player that changes strategies based on their current total score
+class StrategicPlayer1 < Player
 	def roll_again?
 		super && ((@score >= 78 && @turn_score < 22) || @turn_score < 20)
 	end
 end
 
-class StrategicPlay2 < Player
+class StrategicPlayer2 < Player
 	def roll_again?
 		super && ((@score >= 78 && @turn_score < (100 - @score)) || @turn_score < 20)
 	end
 end
 
+## A player that stops after a certain number of rolls
 class LuckySeven < Player
-	def roll_again?
-		count = 0
-		while count < 8
-		  super && count
-			count =+ 1
-		end
-	end
+  def start_turn
+    super
+    @rolls = 0
+  end
+  def record_roll(roll)
+    super
+    @rolls += 1
+  end
+  def roll_again?
+    super && @rolls < 7
+  end
 end
